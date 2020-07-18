@@ -1,0 +1,64 @@
+.table-second__wrapper {
+  background-color: #1b2d37;
+}
+
+.table-second__headline {
+  padding-bottom: 20px;
+
+  @include Roboto-mobile-h2($light-headline);
+}
+
+.table-second__block {
+  display: flex;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+}
+
+.table-second__head,
+.table-second__body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-second__head .table-second__cell {
+  background-image: url("../img/icecream.svg");
+  background-size: 30px 40px;
+}
+
+.table-second__body .table-second__cell {
+  background-image: url("../img/cat.png");
+  background-size: 20px 30px;
+}
+
+.table-second__cell {
+  padding: 20px;
+  width: 25%;
+
+  border: 1px solid #e5e5e5;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.table-second__cell-text {
+  display: none;
+}
+
+@media (min-width: 740px) {
+  .table-second__cell-text {
+    display: inline;
+
+    @include Roboto-mobile-h3($light-headline);
+  }
+
+  .table-second__cell {
+    padding: 20px;
+    width: 25%;
+  }
+
+  .table-second__head .table-second__cell,
+  .table-second__body .table-second__cell {
+    background-image: none;
+  }
+}

@@ -1,0 +1,52 @@
+@mixin Roboto-style-common($font-size, $font-weight, $line-height, $color, $text-align, $text-transform) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin Roboto-mobile-h2($color) {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 28px;
+  line-height: 39px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin Roboto-mobile-h3($color) {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 28px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin Roboto-tablet-h2($color) {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 32px;
+  line-height: 45px;
+  color: $color;
+  text-align: left;
+}
+
+@mixin Roboto-desktop-h2($color) {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 36px;
+  line-height: 57px;
+  color: $color;
+  text-align: left;
+}

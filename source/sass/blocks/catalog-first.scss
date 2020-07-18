@@ -1,0 +1,125 @@
+.catalog-first__headline {
+  margin: 0 auto;
+  padding-bottom: 30px;
+
+  @include Roboto-mobile-h2($dark-headline);
+}
+
+.catalog-first__description {
+  margin: 0;
+  padding-bottom: 20px;
+
+  @include Roboto-mobile-h3($dark-headline);
+}
+
+.catalog-first__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.catalog-first__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  margin: 0 0 20px 0;
+
+  background-image: url("../img/photo1.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 230px;
+  background-color: #1B2D37;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.catalog-first__item-headline {
+  margin: 0;
+  padding: 0 0 25px 25px;
+  background-color: #1b2d37;
+
+  @include Roboto-mobile-h3($dark-headline);
+  color: #ffffff;
+}
+
+.catalog-first__item-description {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .catalog-first__headline {
+    padding: 0 30px 30px 0;
+  }
+
+  .catalog-first__description {
+    padding: 0 30px 30px 0;
+  }
+
+  .catalog-first__list {
+    margin-right: -20px;
+  }
+
+  .catalog-first__item {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 740px) {
+  .catalog-first__headline {
+    @include Roboto-tablet-h2($dark-headline);
+  }
+
+  .catalog-first__list {
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .catalog-first__item {
+    &:nth-child(2) {
+      align-self: flex-start;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .catalog-first__item-description {
+    display: inline-block;
+    padding: 0 25px 0 25px;
+
+    color: $light-headline;
+  }
+
+  .catalog-first__item {
+    &:first-of-type {
+      height: 500px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog-first__headline {
+    @include Roboto-desktop-h2($dark-headline);
+  }
+}

@@ -1,0 +1,149 @@
+.accordion__container {
+  padding: 30px 0;
+}
+
+.accordion__headline {
+  padding: 0 20px;
+  @include Roboto-mobile-h2($dark-headline);
+}
+
+.accordion__description {
+  display: none;
+}
+
+.accordion__block {
+  padding: 20px 0;
+}
+
+.accordion__block-headline {
+  padding: 20px;
+  margin: 0;
+
+  background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 25px 25px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+    background-color: $dark-background;
+  }
+
+  &:active {
+    background-color: $light-background;
+  }
+}
+
+.accordion__block-text {
+  @include Roboto-mobile-h3($dark-headline);
+}
+
+.accordion__list {
+  display: block;
+  list-style-type: none;
+}
+
+.accordion--collapsed {
+  .accordion__block-headline + .accordion__list {
+    display: none;
+  }
+
+  .accordion__block-headline {
+    background-image: url("../img/plus.svg");
+  }
+}
+
+.accordion__item {
+  @include Roboto-mobile-h3($dark-headline);
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 740px) {
+  .accordion__headline {
+    padding: 0 40px;
+  }
+
+  .accordion__block-headline {
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .accordion__container {
+    padding: 30px 50px;
+  }
+
+  .accordion__headline {
+    padding: 0 0 20px 0;
+    @include Roboto-desktop-h2($dark-headline);
+  }
+
+  .accordion__description {
+    display: inline;
+
+    @include Roboto-tablet-h2($dark-headline);
+  }
+
+  .accordion__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .accordion__block-text {
+    display: none;
+  }
+
+  .accordion__block-item {
+    width: 30%;
+  }
+
+  .accordion__block-headline {
+    padding: 60px 20px;
+
+    background-position: center;
+    background-image: url("../img/icecream.svg");
+    background-size: 50px 60px;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      background-color: inherit;
+      filter: drop-shadow(2px 4px 6px $dark-background);
+    }
+
+    &:active {
+      background-color: inherit;
+    }
+  }
+
+  .accordion--collapsed {
+    .accordion__block-headline + .accordion__list {
+      display: none;
+    }
+
+    .accordion__block-headline {
+      background-image: url("../img/cat.png");
+    }
+  }
+
+  .accordion__list {
+    text-align: center;
+  }
+
+  .accordion__item {
+    text-align: center;
+  }
+}

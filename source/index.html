@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Тестовый проект для NKH-Studio"/>
+  <title>NKH-Studio-test</title>
+  <link rel="canonical" href="https://example.com"/>
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<header class="header header__wrapper wrapper">
+  <div class="header__container container">
+    <a class="header__logo-link" href="" aria-label="Ссылка на главную страницу">
+      <picture>
+        <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet.svg">
+        <img class="header__logo-image"
+             src="img/logo-mobile.svg"
+             srcset="img/logo-mobile.svg"
+             alt="Логотип тестового сайта"
+             width="52"
+             height="52">
+      </picture>
+    </a>
+    <button class="header__button" type="button" aria-label="Развернуть меню"></button>
+    <ul class="header__nav">
+      <li class="header__nav-item"><a class="header__nav-link" href="#catalog">Каталог</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#catalog2">Каталог 2</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#catalog3">Каталог 3</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#table">Таблица</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#table2">Таблица 2</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#accordion">Аккордеон</a></li>
+    </ul>
+  </div>
+</header>
+<main class="main">
+  <h1 class="main__headline visually-hidden">Тестовый сайт</h1>
+  <section class="catalog-first catalog-first__wrapper wrapper" id="catalog">
+    <div class="catalog-first__container container">
+      <h2 class="catalog-first__headline">Создать сетку каталога состоящую из 4х колонок и 2 рядов с помощью flex</h2>
+      <p class="catalog-first__description">Поменять направление осей с дефолтного состояния. Выровнять один элемент по поперечней оси.
+        Задать выравнивание ряду flex-end.
+      </p>
+      <ul class="catalog-first__list">
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+          <p class="catalog-first__item-description">Увеличила высоту этого блока, чтобы было заметно выравнивание соседнего элемента.</p>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+        <li class="catalog-first__item">
+          <h3 class="catalog-first__item-headline">Элемент каталога</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="catalog-second catalog-second__wrapper wrapper" id="catalog2">
+    <div class="catalog-second__container container">
+      <h2 class="catalog-second__headline">Создать сетку каталога состоящую из 4х колонок и 2 рядов с помощью inline-block</h2>
+      <ul class="catalog-second__list">
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+        <li class="catalog-second__item">
+          <h3 class="catalog-second__item-headline">Элемент каталога 2</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="catalog-third catalog-third__wrapper wrapper" id="catalog3">
+    <div class="catalog-third__container container">
+      <h2 class="catalog-third__headline">Создать сетку каталога состоящую из 4х колонок и 2 рядов с помощью float</h2>
+      <ul class="catalog-third__list">
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+        <li class="catalog-third__item">
+          <h3 class="catalog-third__item-headline">Элемент каталога 3</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="table-first table-first__wrapper wrapper" id="table">
+  <div class="table-first__container container">
+    <h2 class="table-first__headline">Создать html таблицу из двух рядов и 4 ячеек</h2>
+    <table class="table-first__block">
+      <thead class="table-first__head">
+        <tr class="table-first__row">
+          <th class="table-first__cell table-first__cell--first table-first__cell--active">Услуга 1</th>
+          <th class="table-first__cell table-first__cell--second">Услуга 2</th>
+          <th class="table-first__cell table-first__cell--third">Услуга 3</th>
+          <th class="table-first__cell table-first__cell--fourth">Услуга 4</th>
+        </tr>
+      </thead>
+      <tbody class="table-first__body">
+      <tr class="table-first__row">
+        <td class="table-first__cell table-first__cell--first table-first__cell--active"><span class="table-first__cell-text">Текст</span></td>
+        <td class="table-first__cell table-first__cell--second"><span class="table-first__cell-text">Текст</span></td>
+        <td class="table-first__cell table-first__cell--third"><span class="table-first__cell-text">Текст</span></td>
+        <td class="table-first__cell table-first__cell--fourth"><span class="table-first__cell-text">Текст</span></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="table-first__buttons">
+      <label class="table-first__label" for="cell1">
+        <input class="table-first__radio-button visually-hidden" type="radio" id="cell1" name="cell" checked>
+        <span class="table-first__name"></span>
+      </label>
+      <label class="table-first__label" for="cell2">
+        <input class="table-first__radio-button visually-hidden" type="radio" id="cell2" name="cell">
+        <span class="table-first__name"></span>
+      </label>
+      <label class="table-first__label" for="cell3">
+        <input class="table-first__radio-button visually-hidden" type="radio" id="cell3" name="cell">
+        <span class="table-first__name"></span>
+      </label>
+      <label class="table-first__label" for="cell4">
+        <input class="table-first__radio-button visually-hidden" type="radio" id="cell4" name="cell">
+        <span class="table-first__name"></span>
+      </label>
+    </div>
+  </div>
+  </section>
+  <section class="table-second table-second__wrapper wrapper" id="table2">
+    <div class="table-second__container container">
+      <h2 class="table-second__headline">Создать таблицу из двух рядов и 4 ячеек используя для разметки только div</h2>
+      <div class="table-second__block">
+        <div class="table-second__head">
+          <div class="table-second__cell"><span class="table-second__cell-text">Заголовок</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Заголовок</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Заголовок</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Заголовок</span></div>
+        </div>
+        <div class="table-second__body">
+          <div class="table-second__cell"><span class="table-second__cell-text">Текст</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Текст</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Текст</span></div>
+          <div class="table-second__cell"><span class="table-second__cell-text">Текст</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="accordion accordion__wrapper wrapper" id="accordion">
+    <div class="accordion__container container">
+      <h2 class="accordion__headline">Сделать обыкновенный аккордеон. Не важно JS или JQUERY, но обязательно с нуля.</h2>
+      <p class="accordion__description">Пожалуйста, нажмите на кота</p>
+      <div class="accordion__block">
+        <div class="accordion__block-item">
+          <h3 class="accordion__block-headline"><span class="accordion__block-text">Элемент 1</span></h3>
+          <ul class="accordion__list">
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+          </ul>
+        </div>
+        <div class="accordion__block-item accordion__block-item--closed">
+          <h3 class="accordion__block-headline"><span class="accordion__block-text">Элемент 2</span></h3>
+          <ul class="accordion__list">
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+          </ul>
+        </div>
+        <div class="accordion__block-item accordion__block-item--closed">
+          <h3 class="accordion__block-headline"><span class="accordion__block-text">Элемент 3</span></h3>
+          <ul class="accordion__list">
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+            <li class="accordion__item">Элемент аккордеона</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer footer__wrapper wrapper">
+  <div class="footer__container container">
+    <a class="footer__logo-link" href="" aria-label="Ссылка на главную страницу">
+      <picture>
+        <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet.svg">
+        <img class="header__logo-image"
+             src="img/logo-mobile.svg"
+             srcset="img/logo-mobile.svg"
+             alt="Логотип тестового сайта"
+             width="52"
+             height="52">
+      </picture>
+    </a>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#" aria-label="Ссылка на соц сеть"></a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#" aria-label="Ссылка на соц сеть"></a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link" href="#" aria-label="Ссылка на соц сеть"></a>
+      </li>
+    </ul>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
