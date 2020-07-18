@@ -43,11 +43,16 @@
 .accordion__list {
   display: block;
   list-style-type: none;
+
+  animation-name: slidein;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
 }
 
 .accordion--collapsed {
   .accordion__block-headline + .accordion__list {
     display: none;
+    animation-name: slidein;
   }
 
   .accordion__block-headline {
@@ -67,6 +72,18 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -93,7 +110,7 @@
   .accordion__description {
     display: inline;
 
-    @include Roboto-tablet-h2($dark-headline);
+    @include Verdana-style-common(30px, normal,35px, $dark-headline, left, none);
   }
 
   .accordion__block {

@@ -23,7 +23,7 @@
   padding: 0;
 
   list-style-type: none;
-  text-align: left;
+  text-align: center;
 }
 
 .catalog-second__item {
@@ -86,11 +86,30 @@
 
   .catalog-second__item {
     width: 50%;
+    max-width: 340px;
   }
 }
 
 @media (min-width: 1024px) {
   .catalog-second__headline {
     @include Roboto-desktop-h2($light-headline);
+  }
+}
+
+@media (min-width: 1225px) {
+  .catalog-second__list {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1350px) {
+  .catalog-second__list {
+    padding: 0 70px;
+  }
+}
+
+@media (min-width: 1351px) {
+  .catalog-second__list {
+    padding: 0;
   }
 }

@@ -9,7 +9,11 @@
   margin: 0;
   padding-bottom: 20px;
 
-  @include Roboto-mobile-h3($dark-headline);
+  @include Verdana-style-common(22px, normal, 26px, $dark-headline, left, none);
+}
+
+.catalog-first__git-link {
+  color: $dark-background;
 }
 
 .catalog-first__list {

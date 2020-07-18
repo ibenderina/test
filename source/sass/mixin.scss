@@ -1,5 +1,5 @@
-@mixin Roboto-style-common($font-size, $font-weight, $line-height, $color, $text-align, $text-transform) {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+@mixin Verdana-style-common($font-size, $font-weight, $line-height, $color, $text-align, $text-transform) {
+  font-family: "Verdana", "Arial", sans-serif;
   font-weight: $font-weight;
   text-transform: $text-transform;
   font-size: $font-size;
@@ -13,7 +13,7 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   text-transform: none;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 39px;
   color: $color;
   text-align: left;

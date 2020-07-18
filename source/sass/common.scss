@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
 
-  @include Roboto-style-common(20px, normal, 22px, #111111, left, none);
+  @include Verdana-style-common(20px, normal, 26px, #111111, left, none);
 }
 
 .visually-hidden:not(:focus):not(:active),

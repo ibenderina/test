@@ -8,10 +8,10 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -20,7 +20,7 @@ gulp.task("css", function () {
   .pipe(sass())
   .pipe(postcss([
     autoprefixer({
-      overrideBrowserslist: ["last 4 versions"]
+      browsers: ["last 4 versions"]
     })
   ]))
   .pipe(rename("style.css"))
@@ -39,12 +39,6 @@ gulp.task("images", function () {
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("webp", function () {
-  return gulp.src("source/img/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"));
 });
 
@@ -103,7 +97,6 @@ gulp.task("js", function () {
 gulp.task("build", gulp.series(
   "clean",
   "images",
-  "webp",
   "css",
   "html",
   "copy",
